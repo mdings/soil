@@ -51,3 +51,26 @@ $(function(){
       runs += 1;
     }
   });
+
+
+  const services = document.querySelectorAll('[data-id]')
+  services.forEach(service => {
+    service.addEventListener('click', e => {
+      const target = e.path.find(elm => elm.localName == 'li')
+      target.nextElementSibling.classList.toggle('is-visible')
+    })
+  })
+
+  const images = document.querySelectorAll('[data-src]')
+  images.forEach(img => {
+    img.setAttribute('data-background', img.getAttribute('data-src'))
+  })
+
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    preloadImages: false,
+    lazy: true,
+    // freeMode: true,
+    watchSlidesVisibility: true
+});
+

@@ -1,4 +1,4 @@
-
+@import "./swiper.css"
 
 *,
 *:before,
@@ -82,13 +82,13 @@ p
         
         &:after
             position: absolute
-            bottom: -80px
+            bottom: -90px
             left: 50%
             transform: translate(-50%, -100%)
             display: inline-block
-            content: ''
+            // content: ''
             width: 320px
-            height: 3px
+            height: 6px
             background-color: #08f0a6
             // opacity: .4
 
@@ -164,8 +164,10 @@ p
 
 .about
     background-color: #000
-    border-radius: 10px
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
     padding: 0 80px
+    padding-bottom: 170px
 
     .intro
         padding: 100px 0
@@ -201,6 +203,9 @@ p
         align-items: center
         justify-content: center
 
+    h5
+        margin-bottom: 20px
+
     li
         font-size: 21px
         font-weight: 500
@@ -224,3 +229,28 @@ p
 
         &:nth-child(1) 
             border-top: 1px solid rgba(#fff, .15)
+
+        &:nth-child(even)
+            padding: 60px 40px
+            display: flex
+            display: none
+            justify-content: space-between
+            background-color: rgba(#fff, .15)
+            border-bottom: none
+            text-align: left
+
+            &.is-visible
+                display: flex
+
+            & > *
+                flex: 0 0 50%
+                margin: 0 20px
+
+.swiper-lazy
+    width: 70vw
+    height: 0
+    padding-top: 60%
+    overflow: hidden
+    background-size: cover
+    background-position: center
+

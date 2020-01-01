@@ -13,6 +13,7 @@
   "devDependencies": {
     "lax.js": "^1.2.5",
     "parcel": "^1.12.4",
+    "parcel-plugin-lazy": "0.0.4",
     "sass": "^1.24.0",
     "swiper": "^5.2.1"
   }
