@@ -1,0 +1,226 @@
+
+
+*,
+*:before,
+*:after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-color: rgb(146, 154, 233)
+    background-color: #6a49ff
+    font-family: 'IBM Plex Sans', sans-serif
+    // font-family: 'Noto Sans KR', sans-serif
+    padding: 20px
+    cursor: url('./cursor-auto.png'), auto
+
+
+h1 
+    font-weight: 700
+    font-size: 125px
+    line-height: 1
+
+h2
+    font-weight: 200
+    // margin-top: 30px
+    font-size: 55px
+    line-height: 1.4
+
+
+h3
+    font-size: 80px
+    font-weight: 800
+
+    & + *
+        margin-top: 15px
+
+p
+    font-weight: 300
+    font-size: 18px
+    line-height: 1.6
+
+.container
+    width: 100%
+    // background-color: rgb(146, 154, 233)
+
+.inner
+    // background-color: #000
+    // height: 100vh
+    color: #fff
+    padding: 0 calc((100vw - 1200px) / 2)
+
+    & + .inner
+        // margin-top: 100px
+
+.callout
+    // margin-top: 50vh
+    display: flex
+    // flex-direction: column
+    color: #faf9ff
+    // align-items: stretch
+    // justify-content: flex-end
+    background-color: #6a49ff
+    text-align: center
+    line-height: 1.4
+    padding: 270px 0
+
+    h2
+        position: relative
+
+        &:before
+            // position: absolute
+            // top: -30px
+            // left: 50%
+            // transform: translate(-50%, -100%)
+            // display: inline-block
+            // content: ''
+            // width: 2px
+            // height: 400px
+            // background-color: #08f0a6
+            // opacity: .4
+        
+        &:after
+            position: absolute
+            bottom: -80px
+            left: 50%
+            transform: translate(-50%, -100%)
+            display: inline-block
+            content: ''
+            width: 320px
+            height: 3px
+            background-color: #08f0a6
+            // opacity: .4
+
+
+    & > *
+        max-width: 900px
+        margin: 0 auto
+
+.about
+    text-align: center
+    
+
+.atmosphere
+    height: 120vh
+    background-image: url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+    background-position: center
+    background-size: cover
+    transition: all 250ms ease-in-out
+    position: relative
+    overflow: hidden
+    // border-top-left-radius: 4px
+    // border-top-right-radius: 4px
+    background: transparent
+
+    h1 
+        position: absolute
+        z-index: 989
+        bottom: 300px
+        left: 100px
+        max-width: 900px
+        color: #fa09ce
+
+    &:after
+        // content: ''
+        display: block
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background: rgba(#beffa0, .8)
+
+    #myVideo
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        min-width: 100%
+        min-height: 100%
+
+
+.col-2
+    display: flex
+    align-items: center
+
+    & > *
+        padding: 40px
+
+    & > :nth-child(1)
+        text-align: right
+        flex: 0 0 40%
+
+    & > :nth-child(2)
+        flex: 0 0 60%
+
+
+.service-image
+    height: 300px
+    display: block
+    background-size: cover
+    background-position: center
+
+
+.about
+    background-color: #000
+    border-radius: 10px
+    padding: 0 80px
+
+    .intro
+        padding: 100px 0
+        
+        p
+            font-size: 20px
+            color: #e6b0ff
+
+
+    sup
+        font-size: 11px
+        display: inline-block
+        margin: 0 3px
+        border-radius: 1px
+        background-color: #ffcc5d
+        color: #000
+        padding: 3px 7px
+        font-weight: 600
+        text-transform: uppercase
+
+        &:first-child
+            margin-left: 8px
+
+    ul
+        list-style: none
+        display: block
+        width: 100%
+
+    h4
+        font-size: 61px
+        font-weight: 500
+        display: flex
+        align-items: center
+        justify-content: center
+
+    li
+        font-size: 21px
+        font-weight: 500
+        padding: 60px 0
+        color: #f0ecee
+        text-align: center
+        border-bottom: 1px solid rgba(#fff, .15)
+        position: relative
+        cursor: url('./cursor-pointer.png'), auto
+
+        &:before
+            content: attr(data-id)
+            display: inline-block
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            opacity: .4
+
+
+
+        &:nth-child(1) 
+            border-top: 1px solid rgba(#fff, .15)
