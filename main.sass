@@ -1,4 +1,5 @@
 @import "./swiper.css"
+@import "./include-media"
 
 *,
 *:before,
@@ -8,12 +9,13 @@
     box-sizing: border-box
 
 body
-    background-color: rgb(146, 154, 233)
     background-color: #6a49ff
     font-family: 'IBM Plex Sans', sans-serif
-    // font-family: 'Noto Sans KR', sans-serif
     padding: 20px
     cursor: url('./cursor-auto.png'), auto
+
+    @include media(">1600px")
+        padding: 80px
 
 
 h1 
@@ -122,14 +124,14 @@ p
         color: #fa09ce
 
     &:after
-        // content: ''
+        content: ''
         display: block
         position: absolute
         left: 0
         right: 0
         top: 0
         bottom: 0
-        background: rgba(#beffa0, .8)
+        background: rgba(#906405, .1)
 
     #myVideo
         position: absolute
@@ -174,7 +176,7 @@ p
         
         p
             font-size: 20px
-            color: #e6b0ff
+            color: #ffb09f
 
 
     sup
@@ -202,6 +204,15 @@ p
         display: flex
         align-items: center
         justify-content: center
+        flex-wrap: wrap
+
+        div
+            flex: 0 0 100%
+            margin-top: 15px
+            font-size: 18px
+            opacity: .4
+            font-weight: 200
+            // color: #ffb09f
 
     h5
         margin-bottom: 20px
