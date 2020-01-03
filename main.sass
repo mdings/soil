@@ -63,7 +63,7 @@ p
 .logo
     width: 90px
     height: 90px
-    // background-color: #000
+    background-color: rgba(#000, 50%)
     // mix-blend-mode: overlay
     // opacity: .4
     // display: flex
@@ -71,7 +71,7 @@ p
     // justify-content: center
     position: absolute
     left: 40px
-    top: 0
+    top: 50px
     z-index: 9
     overflow: hidden
     // box-shadow: -5px 5px 0px 0px rgba(#d2e1ff, .8)
@@ -112,10 +112,10 @@ p
 
 
         &.border
-            border-top: 45px solid #000
-            border-right: 45px solid #000
-            border-left: 45px solid lighten(#000, 0%)
-            border-bottom: 45px solid #000
+            // border-top: 45px solid #000
+            // border-right: 45px solid #000
+            // border-left: 45px solid lighten(#000, 0%)
+            // border-bottom: 45px solid #000
 
 .container
     width: 100%
@@ -226,7 +226,7 @@ p
         z-index: 9
         line-height: 1.2
         max-width: 1200px
-        font-size: 57px
+        font-size: 55px
 
         span
             background: linear-gradient(to top,transparent 5%,#9694ff 5%,#9694ff 22%,transparent 22%)
@@ -334,10 +334,13 @@ p
     ul
         list-style: none
         display: block
+        // flex-wrap: wrap
         width: 100%
+        max-width: 1400px
+        margin: 0 auto
 
     h4
-        font-size: 61px
+        font-size: 50px
         font-weight: 500
         display: flex
         align-items: center
@@ -358,7 +361,7 @@ p
     li
         font-size: 21px
         font-weight: 500
-        padding: 60px 0
+        padding: 60px 400px
         color: #f0ecee
         text-align: center
         border-bottom: 1px solid rgba(#fff, .15)
@@ -366,6 +369,7 @@ p
         cursor: url('./cursor-pointer.png'), auto
 
         &:before
+            font-size: 15px
             content: attr(data-id)
             display: inline-block
             position: absolute
@@ -380,6 +384,7 @@ p
         &:nth-child(even)
             padding: 60px 40px
             display: flex
+            flex-wrap: wrap
             display: none
             justify-content: space-between
             background-color: rgba(#fff, .15)
