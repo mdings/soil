@@ -9,19 +9,21 @@
     box-sizing: border-box
 
 body
-    background-color: #3d2b97
-    font-family: 'IBM Plex Sans', sans-serif
+    background-color: #f9f9fa
+    // font-family: 'IBM Plex Sans', sans-serif
+    font-family: 'Source Code Pro', monospace
     padding: 20px
+    padding-top: 30px
     cursor: url('./cursor-auto.png'), auto
 
     @include media(">1600px")
-        padding: 80px
+        // padding: 80px
 
 
-h1 
-    font-weight: 700
-    font-size: 125px
-    line-height: 1
+// h1 
+//     font-weight: 700
+//     font-size: 80px
+//     line-height: 1
 
 h2
     font-weight: 300
@@ -61,32 +63,32 @@ p
 .logo
     width: 90px
     height: 90px
-    background-color: #000
+    // background-color: #000
     // mix-blend-mode: overlay
     // opacity: .4
     // display: flex
     // text-align: center
     // justify-content: center
-    position: fixed
-    left: 20px
-    top: 20px
+    position: absolute
+    left: 40px
+    top: 0
     z-index: 9
     overflow: hidden
     // box-shadow: -5px 5px 0px 0px rgba(#d2e1ff, .8)
     // text-transform: uppercase
 
     svg
-        // display: none
+        display: none
         position: absolute
         left: 50%
-        transform: translateX(-50%)
-        top: 16px
-        width: 30px
+        transform: translate(-50%, 50%)
+        bottom: 50%
+        width: 60px
         height: auto
         z-index: 99
 
         path
-            fill: #48fcc0
+            fill: #ff3e3b
 
     span
         display: block
@@ -98,20 +100,22 @@ p
 
         &.text
             display: inline-flex
-            align-items: flex-start
+            align-items: flex-end
             justify-content: center
-            line-height: 90px
-            color: #48fcc0
+            // line-height: 90px
+            color: #fff
             font-size: 28px
             font-weight: 500
+            margin: 0 6px 6px
+            // box-shadow: inset 0px -2px 0px rgba(#fff, 1)
             // position: relative
 
 
         &.border
-            border-top: 50px solid #213d75
-            border-right: 50px solid #213d75
-            border-left: 50px solid #000
-            border-bottom: 50px solid #000
+            border-top: 45px solid #000
+            border-right: 45px solid #000
+            border-left: 45px solid lighten(#000, 0%)
+            border-bottom: 45px solid #000
 
 .container
     width: 100%
@@ -126,6 +130,26 @@ p
     & + .inner
         // margin-top: 100px
 
+.banner
+    position: absolute
+    right: 40px
+    top: -20px
+    z-index: 8
+    // padding-right: 40px
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+
+    span
+        padding: 15px
+        
+        background-color: #f200ee
+
+    a
+        background-color: #00f404
+        padding: 15px
+        // padding-right: 40px
+
 .callout
     // margin-top: 50vh
 
@@ -134,7 +158,7 @@ p
     color: #faf9ff
     // align-items: stretch
     // justify-content: flex-end
-    background-color: #6a49ff
+    background-color: #d40066
     text-align: center
     line-height: 1.4
     padding: 240px 0 300px
@@ -174,27 +198,16 @@ p
 .about
     text-align: center
     
-
 .atmosphere
-    height: 120vh
-    background-image: url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
-    background-position: center
+    height: 100vh
+    background-image: url('https://images.unsplash.com/photo-1498409785966-ab341407de6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1360&q=80')
     background-size: cover
-    transition: all 250ms ease-in-out
+    background-position: center
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
     position: relative
-    overflow: hidden
-    // border-top-left-radius: 4px
-    // border-top-right-radius: 4px
-    background: transparent
-    // margin: -20px
-
-    h1 
-        position: absolute
-        z-index: 989
-        bottom: 300px
-        left: 100px
-        max-width: 900px
-        color: #fa09ce
 
     &:after
         content: ''
@@ -204,7 +217,20 @@ p
         right: 0
         top: 0
         bottom: 0
-        background: rgba(#906405, .1)
+        background: rgba(#0300d8, .7)
+    
+    h1 
+        position: relative
+        font-weight: 600
+        letter-spacing: -1px
+        z-index: 9
+        line-height: 1.2
+        max-width: 1200px
+        font-size: 57px
+
+        span
+            background: linear-gradient(to top,transparent 5%,#9694ff 5%,#9694ff 22%,transparent 22%)
+            // box-shadow: inset 0px -6px 0px #ff85fd
 
     #myVideo
         position: absolute
@@ -212,7 +238,46 @@ p
         top: 50%
         transform: translateY(-50%)
         min-width: 100%
-        min-height: 100%
+        height: 100vh
+
+// .atmosphere
+//     height: 120vh
+//     background-image: url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+//     background-position: center
+//     background-size: cover
+//     transition: all 250ms ease-in-out
+//     position: relative
+//     overflow: hidden
+//     // border-top-left-radius: 4px
+//     // border-top-right-radius: 4px
+//     background: transparent
+//     // margin: -20px
+
+//     h1 
+//         position: absolute
+//         z-index: 989
+//         bottom: 300px
+//         left: 100px
+//         max-width: 900px
+//         color: #fa09ce
+
+//     &:after
+//         content: ''
+//         display: block
+//         position: absolute
+//         left: 0
+//         right: 0
+//         top: 0
+//         bottom: 0
+//         background: rgba(#906405, .1)
+
+//     #myVideo
+//         position: absolute
+//         right: 0
+//         top: 50%
+//         transform: translateY(-50%)
+//         min-width: 100%
+//         min-height: 100%
 
 
 .col-2

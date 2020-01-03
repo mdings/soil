@@ -5,7 +5,7 @@ const charSet = '0+>AE-$#@%&*'
 const distort = target => {
     // const curr = e.target
     orig = target.innerText
-    sib = setInterval(() => text(target), 500)
+    sib = setInterval(() => text(target), 800)
 }
 
 const undistort = e => {
@@ -35,7 +35,7 @@ const text = current => {
 
 const distortElms = document.querySelectorAll('.distort')
 distortElms.forEach(elm => {
-    distort(elm)
+    // distort(elm)
     // elm.addEventListener('mouseenter', distort)
     // elm.addEventListener('mouseleave', undistort)
 })
