@@ -153,7 +153,7 @@ p
 .callout
     // margin-top: 50vh
 
-    display: flex
+    display: none
     // flex-direction: column
     color: #faf9ff
     // align-items: stretch
@@ -232,13 +232,7 @@ p
             background: linear-gradient(to top,transparent 5%,#9694ff 5%,#9694ff 22%,transparent 22%)
             // box-shadow: inset 0px -6px 0px #ff85fd
 
-    #myVideo
-        position: absolute
-        right: 0
-        top: 50%
-        transform: translateY(-50%)
-        min-width: 100%
-        height: 100vh
+    
 
 // .atmosphere
 //     height: 120vh
@@ -303,10 +297,10 @@ p
 
 
 .about
-    background-color: #000
+    background-color: #4a3a4a
     // border-top-left-radius: 10px
     // border-top-right-radius: 10px
-    padding: 0 80px
+    padding: 0 60px
     padding-bottom: 170px
 
     .intro
@@ -318,18 +312,21 @@ p
 
 
     sup
-        font-size: 11px
+        font-size: 10px
         display: inline-block
-        margin: 10px 5px 0
-        border-radius: 10px
+        // margin: 10px 8px 0 10px
+        margin-bottom: 8px
+        // border-radius: 2px
         background-color: #5aff75
         color: #000
         padding: 3px 11px
         font-weight: 600
         text-transform: uppercase
 
-        &:first-child
+        & + sup
             margin-left: 8px
+        &:first-child
+            // margin-left: 8px
 
     ul
         list-style: none
@@ -339,21 +336,20 @@ p
         max-width: 1400px
         margin: 0 auto
 
-    h4
-        font-size: 50px
-        font-weight: 500
-        display: flex
-        align-items: center
-        justify-content: center
-        flex-wrap: wrap
+    // h4
+    //     font-size: 50px
+    //     font-weight: 500
+    //     display: flex
+    //     align-items: center
+    //     justify-content: center
+    //     flex-wrap: wrap
 
-        div
-            flex: 0 0 100%
-            margin-top: 15px
-            font-size: 19px
-            opacity: .4
-            font-weight: 200
-            // color: #ffb09f
+        // div
+        //     flex: 0 0 100%
+        //     margin-top: 15px
+        //     font-size: 19px
+        //     // opacity: .4
+        //     font-weight: 200
 
     h5
         margin-bottom: 20px
@@ -361,7 +357,7 @@ p
     li
         font-size: 21px
         font-weight: 500
-        padding: 60px 400px
+        padding: 60px 20px
         color: #f0ecee
         text-align: center
         border-bottom: 1px solid rgba(#fff, .15)
@@ -373,17 +369,37 @@ p
             content: attr(data-id)
             display: inline-block
             position: absolute
-            left: 0
+            left: 20px
             top: 50%
             transform: translateY(-50%)
             opacity: .4
 
         &:nth-child(1) 
-            border-top: 1px solid rgba(#fff, .15)
+            border-top: none
+
+        &:nth-child(odd)
+            display: flex
+            align-items: center
+            justify-content: flex-start
+
+            h4
+                flex: 0 0 55%
+                font-size: 39px
+                font-weight: 700
+                display: inline-flex
+                flex-direction: column
+                padding: 0 90px
+                text-align: left
+
+            div
+                // padding: 0 50px
+                line-height: 1.6
+                font-size: 18px
+                text-align: left
+                color: #fba7fb
 
         &:nth-child(even)
             padding: 60px 40px
-            display: flex
             flex-wrap: wrap
             display: none
             justify-content: space-between
@@ -419,7 +435,32 @@ p
 
     &:after
         display: none
-    
+
+.cta
+    background-color: #004747
+    color: #ececfe
+    display: flex
+    padding: 100px
+    font-size: 25px
+    font-weight: 500
+    line-height: 1.2
+
+    span
+        display: inline-flex
+        flex-direction: column
+        justify-content: center
+        flex: 0 0 50%
+        position: relative
+        background-size: cover
+        background-position: center
+
+        .dweep
+            margin: 20px 0
+            font-size: 20px
+            color: #7bf8b9
+
+
+
 .swiper-button-next
     right: 0
     top: 0
@@ -430,3 +471,8 @@ p
 
     &:after
         display: none
+
+#myVideo
+    position: absolute
+    min-width: 100%
+    min-height: 100%
