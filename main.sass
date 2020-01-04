@@ -417,13 +417,29 @@ p
 .impressions
     background-color: mix(#6a49ff, #000, 80%)
 
+.swiper-container
+    height: 60vw
+    max-height: 80vh
+
 .swiper-lazy
     width: 70vw
-    height: 0
-    padding-top: 60%
-    overflow: hidden
+    // height: 0
+    // padding-top: 60%
+    // height: 100vh
+    // overflow: hidden
     background-size: cover
     background-position: center
+    opacity: .9
+    position: relative
+
+    .description
+        position: absolute
+        max-width: 320px
+        top: 60px
+        left: 20px
+        background-color: #fff
+        padding: 12px 10px
+
 
 .swiper-button-prev
     left: 0
